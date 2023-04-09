@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const connectDB = require("./db/connect");
-const port = 8001;
 
 const productsRoutes = require("./routes/productsRoutes");
 
@@ -15,7 +14,7 @@ app.get("/", (req, res) => {
 const start = async () => {
   try {
     connectDB();
-    app.listen(port, () => {
+    app.listen(0.0.0.0:$PORT, () => {
       console.log("listening");
     });
   } catch (error) {
